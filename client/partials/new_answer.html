@@ -1,0 +1,22 @@
+<div ng-controller="QuestionsController as QC" ng-init="UC.getUser()">
+  <a href="#!/">Home</a> | <a href="#!/ques/{{ QC.question._id }}">Back to Question</a> | <a href="" ng-click="UC.logout()">Log Out</a>
+
+  <div>
+    <div ng-init="QC.show()">
+      <h2>{{ QC.question.question }}</h2>
+      <p>Description: {{ QC.question.description }}</p>
+    </div>
+
+    <div>
+      <form ng-submit="QC.createAns(QC.newAnswer, UC.currentUser, QC.question._id)">
+        <label>Answer: <input type="text" ng-model="QC.newAnswer.answer"></label>
+        <label>Details (optional): <textarea ng-model="QC.newAnswer.details" rows="3" cols="30"></textarea></label>
+        <button type="button"><a href="#!/ques/{{ QC.question._id }}">Cancel</a></button>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+
+      <p class="err_msgs" ng-repeat="error in QC.errors">{{ error }}</p>
+  </div>
+
+</div>

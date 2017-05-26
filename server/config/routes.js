@@ -11,4 +11,4 @@ module.exports = function(app) {
   app.post("/answers", Answers.create);
   app.get("/answers/:id", Answers.show);
   app.put("/answers/likes/:id", Answers.addLikes);
-}
+};

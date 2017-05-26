@@ -7,7 +7,7 @@ var AnswerSchema = new mongoose.Schema({
   answer: {
     type: String,
     required: [true, "Answer input can't be blank."],
-    minlenth: [5, "Answer must be at least 5 characters."],
+    minlength: [5, "Answer must be at least 5 characters."],
   },
   details: {
     type: String,

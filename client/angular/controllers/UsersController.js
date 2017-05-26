@@ -44,7 +44,6 @@ app.controller("UsersController", function($cookies, $location) {
 
   self.getUser = function() {
     self.currentUser = $cookies.get("user");
-    console.log(self.currentUser);
   };
 
 

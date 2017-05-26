@@ -5,3 +5,7 @@ h2 {
 .err_msgs {
   color: red;
 }
+
+label {
+  display: block;
+}

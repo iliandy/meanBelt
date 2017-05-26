@@ -1,0 +1,15 @@
+<div class="header" ng-init="UC.getUser()">
+  <a href="#!/">Home</a> | <a href="" ng-click="UC.logout()">Log Out</a>
+</div>
+
+<div ng-controller="QuestionsController as QC">
+  <h2>New Question</h2>
+  <form ng-submit="QC.create(QC.newQuestion, UC.currentUser)">
+    <label>Question: <input type="text" ng-model="QC.newQuestion.question"></label>
+    <label>Description (optional): <textarea ng-model="QC.newQuestion.description" rows="3" cols="30"></textarea></label>
+    <button type="button"><a href="#!/">Cancel</a></button>
+    <input type="submit" value="Submit">
+  </form>
+
+  <p class="err_msgs" ng-repeat="error in QC.errors">{{ error }}</p>
+</div>
