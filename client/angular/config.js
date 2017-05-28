@@ -23,7 +23,7 @@ app.config(function($routeProvider) {
     controller: "UsersController as UC",
   })
 
-  .otherwise({ redirectTo: "/login.html" });
+  .otherwise({ redirectTo: "/login" });
 
 
 });

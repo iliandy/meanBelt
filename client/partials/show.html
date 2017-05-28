@@ -1,4 +1,4 @@
-<div ng-controller="QuestionsController as QC" ng-init="UC.getUser()">
+<div ng-controller="QuestionsController as QC" ng-init="UC.session(); UC.getUser()">
   <a href="#!/">Home</a> | <a href="#!/ques/{{ QC.question._id }}/ans">Answer this Question</a> | <a href="" ng-click="UC.logout()">Log Out</a>
 
   <div ng-init="QC.show()">
