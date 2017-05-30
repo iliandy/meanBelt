@@ -17,6 +17,6 @@ var QuestionSchema = new mongoose.Schema({
     ref: "Answer",
   }],
 
-});
+}, { timestamps: true });
 
 mongoose.model("Question", QuestionSchema);

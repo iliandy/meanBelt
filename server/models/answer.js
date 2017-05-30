@@ -21,6 +21,6 @@ var AnswerSchema = new mongoose.Schema({
     ref: "Question",
   },
 
-});
+}, { timestamps: true });
 
 mongoose.model("Answer", AnswerSchema);
